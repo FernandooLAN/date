@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    max-width: 90%;
+}
+
+.buttons {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: #FFC0CB;
+    border: none;
+    border-radius: 5px;
+}
+
+#no {
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+    color: green;
+}
+
+@media (max-width: 600px) {
+    button {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+.animar {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+ 
