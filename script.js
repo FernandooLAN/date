@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Evento de clique no botão Sim
     yesButton.addEventListener("click", function() {
         // Exibe a imagem ou gif
-        image.src = "/home/fernando/vscode/date/macaco_feliz.jpg"; // Substitua pelo caminho correto da imagem ou gif
+        image.src = "macaco_feliz.jpg"; // Substitua pelo caminho correto da imagem ou gif
         image.style.display = "block";
 
         // Esconde a pergunta e os botões
