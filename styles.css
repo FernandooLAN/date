@@ -56,3 +56,7 @@ button {
     transition: transform 0.3s ease;
 }
  
+#image {
+    max-width: 200px;
+    height: auto;
+}
