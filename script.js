@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.getElementById("buttons");
     
     let scaleIncrement = 1.0;
-    let noMessages = ["Você tem certeza?", "Pensa de novo!", "Tem certeza MESMO?", "Última chance!", "Você vai deixar seu amor triste?", "tadinho... malvada você"];
+    let noMessages = ["Você tem certeza?", "Pensa de novo!", "Tem certeza MESMO?", "Última chance!", "Você vai deixar seu amor triste?", "Tadinho... malvada você"];
     let clickCount = 0;
 
     noButton.addEventListener("click", function() {
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     yesButton.addEventListener("click", function() {
         image.src = "cachorro.png";
         image.style.display = "block";
+        image.style.maxWidth = "150px";
         question.style.display = "none";
         buttons.style.display = "none";
         messageDiv.textContent = "Que bom que respondeu por livre-arbítrio! Estou muito ansioso pelos nossos dates, meu amor!! :)";
