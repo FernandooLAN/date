@@ -5,27 +5,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const question = document.getElementById("question");
     const image = document.getElementById("image");
     const buttons = document.getElementById("buttons");
+    
+    let scaleIncrement = 1.0;
+    let noMessages = ["Você tem certeza?", "Pensa de novo!", "Tem certeza MESMO?", "Última chance!", "Você vai deixar seu amor triste?", "tadinho... malvada você"];
+    let clickCount = 0;
 
-    let scaleIncrement = 1.0; // Inicializa o incremento de escala
-
-    // Evento de clique no botão Não
     noButton.addEventListener("click", function() {
-        scaleIncrement += 0.1; // Incrementa a escala em 0.1
-        yesButton.style.transform = `scale(${scaleIncrement})`; // Aplica a transformação de escala
-        yesButton.style.transition = "transform 0.3s ease"; // Aplica a transição para a transformação
+        scaleIncrement += 0.1;
+        yesButton.style.transform = `scale(${scaleIncrement})`;
+        yesButton.style.transition = "transform 0.3s ease";
+        
+        noButton.textContent = noMessages[clickCount % noMessages.length];
+        clickCount++;
     });
 
-    // Evento de clique no botão Sim
     yesButton.addEventListener("click", function() {
-        // Exibe a imagem ou gif
-        image.src = "macaco_feliz.jpg"; // Substitua pelo caminho correto da imagem ou gif
+        image.src = "cachorro.png";
         image.style.display = "block";
-
-        // Esconde a pergunta e os botões
         question.style.display = "none";
         buttons.style.display = "none";
-
-        // Exibe a mensagem
-        messageDiv.textContent = "Vamooo :)";
+        messageDiv.textContent = "Que bom que respondeu por livre-arbítrio! Estou muito ansioso pelos nossos dates, meu amor!! :)";
     });
 });
